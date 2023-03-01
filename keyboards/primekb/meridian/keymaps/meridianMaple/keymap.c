@@ -109,16 +109,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           if (record->event.pressed) {
               SEND_STRING(
                 SS_DOWN(X_R)
-                SS_DOWN(X_A)
-                SS_DELAY(60)
+                SS_DOWN(X_S)
+                SS_DELAY(70)
                 SS_TAP(X_E)
-                SS_DELAY(260)
+                SS_DELAY(250) //260
                 SS_UP(X_R)
-                SS_DELAY(200)
+                SS_DELAY(170) //200
                 SS_TAP(X_D)
-                SS_DELAY(350)
-                SS_UP(X_A)
-                SS_DELAY(5)
+                SS_DELAY(300) //350?
+                SS_UP(X_S)
+                SS_DELAY(130) // 5 / 110 - back dash
                 SS_TAP(X_SPC)
                 SS_DELAY(60)
               );
@@ -151,7 +151,7 @@ void matrix_scan_user(void) {
                 SEND_STRING(
                     SS_DOWN(X_A)
                     SS_TAP(X_D)
-                    SS_DELAY(180)
+                    SS_DELAY(120)
                     SS_TAP(X_F)
                     SS_DELAY(250)
                     SS_UP(X_A)
@@ -168,7 +168,7 @@ void matrix_scan_user(void) {
                 SEND_STRING(
                     SS_DOWN(X_S)
                     SS_TAP(X_D)
-                    SS_DELAY(180)
+                    SS_DELAY(120)
                     SS_TAP(X_F)
                     SS_DELAY(220)
                     SS_UP(X_S)
@@ -185,13 +185,13 @@ void matrix_scan_user(void) {
                 SEND_STRING(
                     SS_DOWN(X_A)
                     SS_TAP(X_D)
-                    SS_DELAY(100)
+                    SS_DELAY(120)
                     SS_TAP(X_F)
                     SS_DELAY(220)
                     SS_UP(X_A)
                     SS_DELAY(200)
                     SS_TAP(X_SPC)
-                    SS_DELAY(60)
+                    SS_DELAY(40)
                 );
                 key_timer = timer_read32();
             }
@@ -202,13 +202,13 @@ void matrix_scan_user(void) {
                 SEND_STRING(
                     SS_DOWN(X_S)
                     SS_TAP(X_D)
-                    SS_DELAY(100)
+                    SS_DELAY(120)
                     SS_TAP(X_F)
                     SS_DELAY(220)
                     SS_UP(X_S)
                     SS_DELAY(200)
                     SS_TAP(X_SPC)
-                    SS_DELAY(60)
+                    SS_DELAY(40)
                 );
                 key_timer = timer_read32();
             }
